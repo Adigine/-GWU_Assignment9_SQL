@@ -93,6 +93,12 @@ FROM staff
 INNER JOIN address ON staff.address_id = address.address_id;
 
 #6b
+SELECT staff_id, first_name, last_name SUM(amount) FROM payment WHERE payment_date LIKE '2005-08%'
+	GROUP BY staff_id IN (
+    
+
+SELECT * FROM STAFF;
+#INNER JOIN staff ON payment.staff_id = staff.staff_id;
 
 #6c
 SELECT film_actor.film_id, film_actor.actor_id, film.title
